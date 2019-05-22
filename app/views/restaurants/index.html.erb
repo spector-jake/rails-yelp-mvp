@@ -1,8 +1,13 @@
-<h1>Restaurants</h1>
-<hr>
+<nav class="navbar navbar-light bg-light" role="navigation">
+  <div class="container-fluid">
+    <h1 class=navbar-brand">Restaurants</h1>
+    <%= link_to 'New Restaurant', new_restaurant_path, class: " btn btn-outline-primary" %>
+  </div>
+</nav>
+
 <% @restaurants.each do |restaurant| %>
   <h4><%= link_to restaurant.name, restaurant_path(restaurant)%></h4>
   <br>
 <% end %>
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+
